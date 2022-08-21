@@ -18,6 +18,7 @@ func (mc multiCloser) Close() error {
 	return multierr.Combine(errs...)
 }
 
+// MultiCloser creates a closer that iterates through all closers, returning all non-nil errors. 
 func MultiCloser(closers ...io.Closer) io.Closer {
 	return multiCloser{closers: closers}
 }
