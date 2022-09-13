@@ -1,4 +1,4 @@
-package slices
+package xslices
 
 // Distinct returns the unique values in ss.
 // order not preserved.
